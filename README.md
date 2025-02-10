@@ -1,15 +1,20 @@
 # Homework: Long Arithmetic in Kotlin
 
 ## Description 
-Implement a `BigInt` class that supports working with arbitrarily large integers that exceed `Long.MAX_VALUE`. The class should support basic arithmetic operations, comparison, and additional utility functions.
-
+- Implement a `BigInt` class that supports working with arbitrarily large integers (beyond `Long.MAX_VALUE`) without using Java’s built-in `BigInteger`.
+- Your implementation must adhere to the provided interface (`BigIntInterface`).
+-  The class must support basic arithmetic operations, comparisons (with both `BigInt` and primitive types), and utility functions.
 ## Requirements 
 
 ### 1. Number Representation
-- The number should be stored as a **string** or **list of digits** (**without using `BigInteger`**).
+- The number should be stored as a **string** or **list of digits** .
 -  The class must support **both positive and negative numbers**.
-- Input strings must be validated to contain only numeric characters (with an optional leading `-`).
-
+- The internal representation must be normalized:
+  -   **No leading zeros** (except for the number zero itself, which should be represented as `"0"`).
+  -   Use a separate sign indicator (e.g., `-1` for negative, `0` for zero, and `1` for positive).
+-   **Input Validation:**
+    -   The constructor must validate that the input string contains only numeric characters (with an optional leading `-`).
+    -   Invalid input (e.g. `"abc"`) should throw an `IllegalArgumentException`.
 ### 2. Supported Operations
 Implement the following operators and methods:
 
@@ -105,35 +110,35 @@ println(a.pow(0))   // 1
 
 -   **Constructor:**
     
-    ```kotlin  
+    ```kotlin
     class BigInt(value: String)
     ```
     **Example:**
-    
-    
+- 
     ```kotlin
     val number = BigInt("12345678901234567890")
     println(number) // 12345678901234567890
     ```
+
 - **Sign handling:**
 	   
     ```kotlin  
-	fun sign(): Int  // Returns -1 for negative numbers, 0 for zero, 1 for positive numbers
+	 fun sign(): Int  // Returns -1 for negative numbers, 0 for zero, 1 for positive numbers
 	```
 	**Example:**
     ```kotlin  
-	println(BigInt("-123").sign())  // -1
-	println(BigInt("0").sign())     // 0
-	println(BigInt("987").sign())   // 1
+	 println(BigInt("-123").sign())  // -1
+	 println(BigInt("0").sign())     // 0
+	 println(BigInt("987").sign())   // 1
 	```
 - **Absolute Value:**
 	   
     ```kotlin  
-	fun abs(): BigInt
+	 fun abs(): BigInt
 	```
 	**Example:**
     ```kotlin  
-	println(BigInt("-12345").abs())  // 12345
+	 println(BigInt("-12345").abs())  // 12345
 	```
 -   **`toString()` method** to correctly display the number.
     
@@ -149,10 +154,10 @@ class BigInt : Comparable<BigInt>
 ```
 - Implement comparison operators:
   ```kotlin  
-	operator fun compareTo(other: BigInt): Int
-	operator fun compareTo(other: Int): Int
-	operator fun compareTo(other: Short): Int
-	operator fun compareTo(other: Byte): Int
+	 operator fun compareTo(other: BigInt): Int
+	 operator fun compareTo(other: Int): Int
+	 operator fun compareTo(other: Short): Int
+	 operator fun compareTo(other: Byte): Int
 	```
 **Example:**
 ```kotlin
