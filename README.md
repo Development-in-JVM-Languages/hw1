@@ -142,7 +142,7 @@ println(a.pow(0))   // 1
     -   Division by zero should throw an `ArithmeticException`.
     -   Invalid input format (e.g., `BigInt("abc")`) should throw an `IllegalArgumentException`.
 
-### 5. Comparable and Equality
+### 4. Comparable and Equality
 #### Comparison (`Comparable` Interface)
 ```kotlin
 class BigInt : Comparable<BigInt>
