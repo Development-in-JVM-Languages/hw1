@@ -200,6 +200,30 @@ class BigIntTest {
     }
 
     @Test
+    fun testPowShort() {
+        val a = createBigInt("2")
+        val exp: Short = 10
+        val result: BigInt = a.pow(exp)
+        assertEquals("1024", result.toString())
+    }
+
+    @Test
+    fun testPowByte() {
+        val a = createBigInt("2")
+        val exp: Byte = 10
+        val result: BigInt = a.pow(exp)
+        assertEquals("1024", result.toString())
+    }
+
+    @Test
+    fun testPowBigInt() {
+        val a = createBigInt("2")
+        val exp = createBigInt("10")
+        val result: BigInt = a.pow(exp)
+        assertEquals("1024", result.toString())
+    }
+
+    @Test
     fun testExponentiationWithNegativeBase() {
         val a = createBigInt("-2")
         assertEquals("-8", a.pow(3).toString())
