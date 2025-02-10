@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 // Helper function: assume that your BigInt implements BigIntInterface
-private fun createBigInt(value: String): BigIntInterface = BigInt(value)
+private fun createBigInt(value: String): BigInt = BigInt(value)
 
 class BigIntTest {
 

@@ -2,7 +2,6 @@
 
 ## Description 
 - Implement a `BigInt` class that supports working with arbitrarily large integers (beyond `Long.MAX_VALUE`) without using Java’s built-in `BigInteger`.
-- Your implementation must adhere to the provided interface (`BigIntInterface`).
 -  The class must support basic arithmetic operations, comparisons (with both `BigInt` and primitive types), and utility functions.
 ## Requirements 
 
