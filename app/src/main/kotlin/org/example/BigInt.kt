@@ -1,4 +1,4 @@
-class BigInt(value: String) /*: TODO Inheritance */ {
+class BigInt(value: String) : Comparable<BigInt> {
     operator fun plus(other: BigInt): BigInt {
         TODO("Not yet implemented")
     }
