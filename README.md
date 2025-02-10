@@ -1,4 +1,3 @@
-
 # Homework: Long Arithmetic in Kotlin
 
 ## Description 
@@ -11,7 +10,8 @@ Implement a `BigInt` class that supports working with arbitrarily large integers
 -  The class must support **both positive and negative numbers**.
 - Input strings must be validated to contain only numeric characters (with an optional leading `-`).
 
-### 2. Supported Operations Implement the following operators and methods:
+### 2. Supported Operations
+Implement the following operators and methods:
 
 #### Addition 
 ```kotlin
