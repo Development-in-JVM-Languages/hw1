@@ -1,5 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_23
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
 plugins {
     // Adds support for Kotlin on the JVM.
     kotlin("jvm") version "2.1.10"
@@ -24,5 +24,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    compilerOptions.jvmTarget = JVM_23
+    compilerOptions.jvmTarget = JVM_21
 }
